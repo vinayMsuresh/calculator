@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <!-- Linking required css and js files. -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+
+  <script src="calc.js"></script>
+</head>
+
+<body>
+    <main class="container  bg-light">
+        <!-- heading using nav bar. -->
+        <nav class="navbar navbar-dark bg-dark justify-content-center">
+            <h1 class="text-white">CALCULATOR</h1>
+          </nav>
+    
+        <div class="row">
+            <div class="col-lg-8 center-block">
+                <form class="form-group mr-auto">
+                    <!-- Textbox which is same as the display unit in calculator. -->
+                    <input type="text" class="inp form-control bg-dark text-white" id="exp" required>
+
+                    <!-- Inserting basic required buttons for normal calculator. -->
+                    <table class="table table-bordered table-dark">
+                        <tr>
+                            <td><button type="button" id="one" class="btn btn-primary mr-auto" onclick="clicked('1')"><b>1</b></button></td>
+                            <td><button type="button" id="two" class="btn btn-primary mr-auto" onclick="clicked('2')"><b>2</b></button></td>
+                            <td><button type="button" id="three" class="btn btn-primary mr-auto" onclick="clicked('3')"><b>3</b></button></td>
+                            <td><button type="button" id="add" class="btn btn-primary mr-auto" onclick="clicked('+')"><b>+</b></button></td>
+                        </tr>
+                  
+                        <tr>
+                           <td> <button type="button" id="four" class="btn btn-primary mr-auto" onclick="clicked('4')"><b>4</b></button></td>
+                            <td><button type="button" id="five" class="btn btn-primary mr-auto" onclick="clicked('5')"><b>5</b></button></td>
+                           <td> <button type="button" id="six" class="btn btn-primary mr-auto" onclick="clicked('6')"><b>6</b></button></td>
+                            <td><button type="button" id="sub" class="btn btn-primary mr-auto" onclick="clicked('-')"><b>-</b></button></td>
+                        </tr>
+                    
+                        <tr>
+                   <td> <button type="button" id="seven" class="btn btn-primary mr-auto" onclick="clicked('7')"><b>7</b></button></td>
+                    <td><button type="button" id="eight" class="btn btn-primary mr-auto" onclick="clicked('8')"><b>8</b></button></td>
+                    <td><button type="button" id="nine" class="btn btn-primary mr-auto" onclick="clicked('9')"><b>9</b></button></td>
+                   <td><button type="button" id="mul" class="btn btn-primary mr-auto" onclick="clicked('*')"><b>x</b></button></td> 
+                </tr>
+
+                <tr>
+                    <td><button type="button" id="div" class="btn btn-primary mr-auto" onclick="clicked('/')"><b>/</b></button></td>
+                    <td><button type="button" id="zero" class="btn btn-primary mr-auto" onclick="clicked('0')"><b>0</b></button></td>
+                    <td><button type="button" id="per" class="btn btn-primary mr-auto" onclick="clicked('%')"><b>%</b></button></td>
+                    <td><button type="button" id="equal" class="btn btn-primary mr-auto"><b>=</b></button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button type="reset" id="clr" class="btn btn-primary mr-auto"><b>clear</b></button></td>
+                </tr>
+                </table>
+                </form>
+            </div>
+
+            <!-- Inserting textarea for storing the history. -->
+            <div class="col-lg-4 center-block">
+                <textarea id="tarea" cols="40" rows="15" placeholder="History"></textarea>
+            </div>
+        </div>
+    </main>
+
+<!-- The required bootstrap javascript files. -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
